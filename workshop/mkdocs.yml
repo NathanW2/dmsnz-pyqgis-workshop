@@ -1,7 +1,9 @@
-site_name: My Docs
+site_name: DMS NZ PyQGIS Plugin workshop
 pages:
 - Home: index.md
 - Getting Started: started.md
 - Deploying Plugin: deploy.md
+- Creating the UI and adding logic: addingui.md
+- Adding QGIS logic: qgis.md
 - About: about.md
 theme: readthedocs

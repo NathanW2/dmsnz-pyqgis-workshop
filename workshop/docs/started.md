@@ -10,10 +10,16 @@ Here are some links that we might use throughout the workshop or you can use lat
 
 **Note:** We will be using 2.8 as the target install for PyQGIS however as the API is stable between 2.x version using 2.10 is also fine.
 
-Plugin goals
-The goal of the workshop is to create a plugin but not just a “here is how to open a layer” type plugin, although they are handy, they don’t get you very far and the cookbook already covers that .  Let's build something that touches on different parts of the application, from symbols, layers, features, and even drag and drop if we get time.
+## Plugin goals
 
-The final goal of the plugin is to create something that can add new QGIS features based on a pre defined template for quick add.  Here is an example of the UI that we are going to build:
+The goal of the workshop is to create a plugin but not just a “here is how to open a layer” type plugin, although they are handy,
+ they don’t get you very far and the cookbook already covers that.
+Let's build something that touches on different parts of the application, from symbols, layers, features, and even drag and drop if we get time.
+
+The final goal of the plugin is to create something that can update QGIS features based on a pre defined templates.
+The plugin will take the selected assets and update the values on the feature based on what is in the template.
+
+Here is an example of the UI that we are going to build:
 
 
 ![Image](img/goal1.png)
@@ -24,11 +30,14 @@ A bit ambitious for 3 hours? No doubt but we will give it a good crack.
 
 ## Creating the project
 
-We are not going to start from nothing, that doesn’t really help us, so we are going to use a basic plugin setup to get up and running. 
-This is only so we can get something started a more correct plugin, something that you can publish for others to use can need more work and polish.
+We are not going to start from nothing, that doesn’t really help us, so we are going to use a basic plugin setup to get 
+up and running. 
+
+This is only so we can get something started a more correct plugin, something that you can publish for others to 
+use can need more work and polish.
 
 - Copy the qgis-pluigin-template folder from the sample folder and make a new copy. Copy it into the same base folder
-- Rename the plugin folder to feature_templates
+- Rename the plugin folder to **feature_templates**
 - Open PyCharm and select File -> New Project (Create Project at the load screen)
 - Select the folder you just created from the template project and set the Python version to the QGIS install
 
@@ -65,7 +74,7 @@ Open the metadata.txt file in PyCharm we are going to update it with some of the
 
 ```
 [general]
-name=Feature Template
+name=feature_template
 description=Feature template builder for DMS NZ workshop
 about=Feature template builder for DMS NZ workshop
 version=1.0

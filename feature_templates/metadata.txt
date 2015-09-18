@@ -1,18 +1,17 @@
 [general]
-name=Minimal
-description=Sample Plugin
-about=Sample Plugin
+name=feature_template
+description=Feature template builder for DMS NZ workshop
+about=Feature template builder for DMS NZ workshop
 version=1.0
-qgisMinimumVersion=2.0
-author={Your name}
+qgisMinimumVersion=2.8
+author=Nathan Woodrow
 email={your email}
 icon=icon.png
 changelog=
-        0.1
-        First version
+       0.1
+       First version
 
 homepage=
 tracker=
 repository=
-
 

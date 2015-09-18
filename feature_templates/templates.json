@@ -1,0 +1,12 @@
+{
+  "water pipe - 100mm":
+  {
+    "type": "water pipe",
+    "size": 100
+  },
+  "sewer pipe - 200mm":
+  {
+    "type": "sewer pipe",
+    "size": 200
+  }
+}

@@ -1,0 +1,7 @@
+site_name: My Docs
+pages:
+- Home: index.md
+- Getting Started: started.md
+- Deploying Plugin: deploy.md
+- About: about.md
+theme: readthedocs

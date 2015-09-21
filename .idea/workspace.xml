@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b21e52e6-a590-421f-b714-e1dae9c5ffc1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/installed2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/plugininstalled2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/settings.png" />
-      <change type="DELETED" beforePath="F:\Workshop\QGIS-NZ\templatedock.ui" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/data.sqlite" afterPath="$PROJECT_DIR$/project/data.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/designer.png" afterPath="$PROJECT_DIR$/workshop/docs/img/designer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/dockvalues.png" afterPath="$PROJECT_DIR$/workshop/docs/img/dockvalues.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/goal1.png" afterPath="$PROJECT_DIR$/workshop/docs/img/goal1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/installed.png" afterPath="$PROJECT_DIR$/workshop/docs/img/installed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/plugininstalled.png" afterPath="$PROJECT_DIR$/workshop/docs/img/plugininstalled.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/project.png" afterPath="$PROJECT_DIR$/workshop/docs/img/project.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_templates/ui_templatedock.ui" afterPath="$PROJECT_DIR$/feature_templates/ui_templatedock.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/win1.png" afterPath="$PROJECT_DIR$/workshop/docs/img/win1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyQGIS-Cmd.bat" afterPath="$PROJECT_DIR$/PyQGIS-Cmd.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyQGIS-PyCharm.bat" afterPath="$PROJECT_DIR$/PyQGIS-PyCharm.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/addingui.md" afterPath="$PROJECT_DIR$/workshop/docs/addingui.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/deploy.md" afterPath="$PROJECT_DIR$/workshop/docs/deploy.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/qgis.md" afterPath="$PROJECT_DIR$/workshop/docs/qgis.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/started.md" afterPath="$PROJECT_DIR$/workshop/docs/started.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="F:\Workshop\QGIS-NZ\feature_templates\images\icon.png" afterPath="$PROJECT_DIR$/icon.png" />
-    </list>
+    <list default="true" id="b21e52e6-a590-421f-b714-e1dae9c5ffc1" name="Default" comment="" />
     <ignored path="QGIS-NZ.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +43,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39145496" vertical-offset="885" max-vertical-offset="1751">
-              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.6270208" vertical-offset="885" max-vertical-offset="1751">
+              <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -226,20 +199,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="feature_templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,10 +398,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -483,17 +442,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/feature_templates/resources.qrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <marker date="1442536515833" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1442536515833" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workshop/docs/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -501,14 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="866">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_templates/metadata.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -529,33 +469,6 @@
     <entry file="file://$PROJECT_DIR$/workshop/docs/img/goal1.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_templates/templates.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1442552498871" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1442552498871" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;sewer pipe&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_templates/pb_tool.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_templates/plugincore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="1411">
-          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/workshop/mkdocs.yml">
@@ -721,8 +634,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39145496" vertical-offset="885" max-vertical-offset="1751">
-          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.6270208" vertical-offset="885" max-vertical-offset="1751">
+          <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
           <folding />
         </state>
       </provider>

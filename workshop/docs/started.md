@@ -1,7 +1,14 @@
 # Getting Started - Creating the base plugin
 
-Most PyQGIS workshops normally start with using the QGIS plugin builder plugin, however we will not be using it in this workshop as it generates a lot of code and can be confusing when just starting.  It’s best to get an understanding of what each thing and how it works and fits together before using a template to save you time.  Once you understand the process template the heck out of it!
-Workshop links:
+### Goals
+
+- Generate a plugin using the QGIS plugin builder
+- View plugin layout
+- View plugin metadata
+- View main plugin code
+
+### Handy Links
+
 Here are some links that we might use throughout the workshop or you can use later when building a plugin or working with the QGIS Python API.
 
 - QGIS API: http://qgis.org/api/
@@ -17,45 +24,65 @@ The goal of the workshop is to create a plugin but not just a “here is how to 
 Let's build something that touches on different parts of the application, from symbols, layers, features, and even drag and drop if we get time.
 
 The final goal of the plugin is to create something that can update QGIS features based on a pre defined templates.
-The plugin will take the selected assets and update the values on the feature based on what is in the template.
 
 Here is an example of the UI that we are going to build:
 
-
 ![Image](img/goal1.png)
-![Image](img/gaol2.png)
 
 
-A bit ambitious for 3 hours? No doubt but we will give it a good crack.
+## Creating the plugin
 
-## Creating the project
-
-We are not going to start from nothing, that doesn’t really help us, so we are going to use a basic plugin setup to get 
-up and running. 
+We are not going to start from nothing, that doesn’t really help us, so we are going to use the QGIS plugin builder
+to get up and running. 
 
 This is only so we can get something started a more correct plugin, something that you can publish for others to 
 use can need more work and polish.
 
-- Copy the qgis-pluigin-template folder from the sample folder and make a new copy. Copy it into the same base folder
-- Rename the plugin folder to **feature_templates**
-- Open PyCharm and select File -> New Project (Create Project at the load screen)
-- Select the folder you just created from the template project and set the Python version to the QGIS install
+### QGIS Plugin builder
 
-![Image](img/create.png)
+For this we will need the QGIS plugin builder.  The QGIS plugin builder is a plugin you can install in QGIS that will
+generate a plugin for you ready to go.
 
-PyCharm will give you a warning about already having code in that. 
+- Open QGIS and install the QGIS Plugin Builder Plugin
+- From `Plugins -> Plugin Builder` run the plugin
 
-![Image](img/override.png)
+The plugin builder will gives us a screen to fill in all the information that is needed.  Go ahead and fill in the in 
+information as shown below:
 
+![Image](img/p_screen1.png)
+![Image](img/p_screen2.png)
 
-Say Yes to this as we want to create a PyCharm project from this lot of files
+Be sure to select **Tool button with dock widget** as the template
 
-Once open in PyCharm we now have the basic code layout ready to go:
+![Image](img/p_screen3.png)
+
+One should always add unit tests to our code but we won't here because well :P We are also using `pb_tool` so untick `Makefile`
+
+![Image](img/p_screen4.png)
+
+If you want to publish the plugin for others it needs to have a bug tracker and code repository however we can put in stub
+entries for those now as we don't need it yet and it's only enforced at publish time.
+
+![Image](img/p_screen5.png)
+
+The next screen will ask you to select a folder to save the plugin into.  Save it into a know place for you. Doesn't matter
+where just somewhere easy to get to.
+
+### PyCharm project
+
+We need to create a PyCharm project from the folder the plugin builder just generated for us.
+
+- Open PyCharm and select `File -> Open` and select the folder that you just created using the plugin.  Should 
 
 ![Image](img/project.png)
 
+Open `File -> Settings` search for `Project` and set the **Project Interpertor** to the QGIS installed one.
 
-## Plugin layout explained
+![Image](img/settings.png)
+
+**Note**: On Linux/OS X this is the default Python install no need to do anything here.
+
+## Plugin layout break down
 
 Before we get started it’s best to explain the basic layout of the simple plugin we have here
 
@@ -63,37 +90,20 @@ Before we get started it’s best to explain the basic layout of the simple plug
 - `__init__.py` - The main entry point for this plugin that is called when QGIS loads the plugin
 - `LICENSE` - Well I’m sure you can guess
 - `metadata.txt` - The plugin metadata that is used when uploading the plugin to the plugin repository and when QGIS loads the plugin
-- `plugincore.py` - The main code file for this plugin.  We will be adding a few more of these though out the workshop
-- `README.md` - Notes on the plugin
+- `feature_template.py` - The main code file for this plugin.  We will be adding a few more of these though out the workshop
+- `README.txt` - The README for the plugin
+- `pb_tool.cfg` - The `pb_tool` config file. Used to build and deploy the plugin
+- `resoruces.qrc` - Qt resource file used to add icons to buttons and widgets.
+- `feature_template_dockwidget_base.ui` - The base dock widget UI base file. We will open this in Qt Designer a bit later
+- `feature_template_dockwidget.py` - Core logic for the `feature_template_dockwidget_base.ui`
 
-Plugin layouts can different per project but will at a minimum contain these files
+There is also a scripts folder and help folder which we won't go into at this stage.
 
 ## Metadata
 
-Open the metadata.txt file in PyCharm we are going to update it with some of the details of our plugin
+Open the metadata.txt file in PyCharm and have a look at the layout. This file contains all the information that used
+by QGIS when it displays the plugin in the installer.
 
-```
-[general]
-name=feature_template
-description=Feature template builder for DMS NZ workshop
-about=Feature template builder for DMS NZ workshop
-version=1.0
-qgisMinimumVersion=2.8
-author=Nathan Woodrow
-email={your email}
-icon=icon.png
-changelog=
-       0.1
-       First version
-
-homepage=
-tracker=
-repository=
-```
-
-`homepage`, `tracker`, `repository` are required fields if you will be uploading the plugin to the plugin repository
- however we will just leave them blank for now.  We might come back and fill them in later if we get time to upload them.
- 
 ## `__init__` file and plugin entry point
  
 Open up the `__init__` file.  The `__init__` file marks this folder as a Python package and QGIS can load a Python package
@@ -102,56 +112,53 @@ as a plugin if the package setup is right.
 Inside `__init__` you will find
 
 ```
-from plugincore import PluginCore
-
-
 def classFactory(iface):
-    """
-    Main entry point for the QGIS plugin.  QGIS calls me and passes an instance of the interface object which
-    can be used to talk to the main QGIS interface.
-    :param iface: The API interface object used to talk to QGIS
-    :return: A instance of the main class used by your plugin
-    """
-    return PluginCore(iface)
+    """Load FeatureTemplates class from file FeatureTemplates.
 
+    :param iface: A QGIS interface instance.
+    :type iface: QgsInterface
+    """
+    #
+    from .feature_template import FeatureTemplates
+    return FeatureTemplates(iface)
 ```
 
 The `classFactory` method is called when QGIS loads the plugin. QGIS will pass the API interface object (`QgisInterface`)
 into your plugin. This object is normally used to talk to the main QGIS UI interface.
 
-The main thing this function does is return an instance of the class for you plugin (`PluginCore`).  `PluginCore` can be
-found in `plugincore.py`
+The main thing this function does is return an instance of the class for you plugin (`FeatureTemplates`).  `FeatureTempaltes` can be
+found in `feature_template.py`
 
 ## PluginCore
 
-Lets take a quick look at PluginCore before we do a test plugin install and then we will get into the good stuff.
-
-```
-class PluginCore:
-    def __init__(self, iface):
-        self.iface = iface
-
-    def initGui(self):
-        self.action = QAction("Go!", self.iface.mainWindow())
-        self.action.triggered.connect(self.run)
-        self.iface.addToolBarIcon(self.action)
-
-    def unload(self):
-        self.iface.removeToolBarIcon(self.action)
-        del self.action
-
-    def run(self):
-        QMessageBox.information(None, "Minimal plugin", "Do something useful here")
-``` 
+Lets take a quick look at `feature_template.py` before we do a test plugin install.  There is a lot of stuff in this
+template but we just need to have a quick look at a few methods
 
 The two main important methods here are `initGui` and `unload`. 
 
 - `initGui` called when the plugin is loaded from QGIS.  Called when QGIS is loaded. We normally setup events, buttons, etc here
 - `unload` called when the plugin is uploaded from the interface.  We do things that remove the plugin from the QGIS interface.
 
-This basic plugin at this stage will simply create a toolbar icon called **Go!** and open a message box when pressed.
+# Important!
 
-Lets move on to [deploying](deploy.md) the project to test this.
+**Don't skip this step as the plugin will not load correctly**
+
+Before we move on we need to update one thing the plugin builder doesn't generate correctly.  
+
+Change the following line at the top from
+
+```
+import resources
+```
+
+to 
+
+```
+import resources_rc
+```
+
+
+# Lets move on to [deploying](deploy.md) the project to test this.
 
 
 

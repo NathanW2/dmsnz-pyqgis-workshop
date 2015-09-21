@@ -9,10 +9,9 @@ Goals:
 - Update features based on only set fields from config
 - Refresh the map
 
-First things first we need to handle the `apply_template` button from the last step in our `PluginCore` class.  In here we are going to grab the
-selected objects and apply the field data we have in our template to the objects.
+First things first we need to handle the `apply_template` button from the last step in our `FeatureTemplates` class.  
+In here we are going to grab the selected objects and apply the field data we have in our template to the objects.
 
-We can get the active layer object (make sure **pipes** is active) by doing:
 
 ```
 layer = self.iface.activeLayer()
@@ -34,7 +33,7 @@ putting it all together we have
             pass
 ```
 
-now we want to apply the value from the `feilds` dictionary to the feature. Each `feature` will be of type `QgsFeature`
+now we want to apply the value from the `fields` dictionary to the feature. Each `feature` will be of type `QgsFeature`
 
 ```
     for feature in features:
@@ -78,8 +77,10 @@ Run `pb_deploy` and reload the plugin in QGIS.
 Load the sample **workshop.qgs** qgis project found in the project folder for this workshop.  This project already has
 some sample data we can work with. 
 
-None of the data in the sample project has any type of sizes assigned.  We are now going to use the plugin to assign those
-values. 
+We can get the active layer object (make sure **pipes** is active) by doing:
+
+The data in the sample project doesn't have any type or size data assigned.  
+We are now going to use the plugin to assign those values. 
 
 - Select some features using the select tool
 - Enable editing in the toolbar

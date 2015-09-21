@@ -4,13 +4,11 @@ To create the UI you will need Qt Designer. This is shipped with QGIS and instal
 
 Run the application called **designer.exe**
 
+After we open designer we are going to select **Open..** and select `feature_template_dockwidget_base.ui`
+
 ![Image](img/designer.png)
 
-After we open designer we are going to select **QDockWidget** as we are going to make a dock inside QGIS.
-
-![Image](img/widget.png)
-
-On the sidebar we have the widgets list and properties.
+Select and delete the label that is already in the dock widget.
 
 Widgets
 
@@ -20,13 +18,14 @@ Properties
 
 ![Image](img/properties.png)
 
-
 For our widget we are going to need a `Stacked Widget`.
 
 - Drag the stack widget onto the form
-- Right click in the emptry form and select `Layout -> Layout in Grid`
+- Right click in the empty form and select `Layout -> Layout in Grid`
 
 All Qt widgets are contained in layouts.  The layout controls how the widgets fit together.
+
+We can use the stacked widget to add move "pages" to our widget later if we connect the define new button.
 
 You will also need 3x `Push Button` and a `List Widget`.  
 
@@ -46,87 +45,28 @@ The name of the object is important because we will use this in the code to set 
 
 - Save the UI file into your plugin working folder. Call it `ui_templatedock.ui`
 
-## Compliing the UI
+## Generating the UI files
 
-We need to edit the pb_tool.cfg to add the UI file we created. Open **pb_tool.cfg** and edit the `compiled_ui_files` section
-to add the ui file we made
+Qt has a handy function for creating the UI files on the fly.  This removes the build step for generating the UI files
 
-```
-# Other ui files for your dialogs (these will be compiled)
-compiled_ui_files: ui_templatedock.ui
-```
+Qt only needs the path to the `.ui` file and it will generate the Python object on the fly ready to use.
 
-Flick back to your **Console** that you opened where you ran `pb_tool`. 
-
-- `pb_tool complie`
-
-This will create a Python file based on the UI file that was created
+Open `feature_template_dockwidget.py`
 
 ```
-F:\Workshop\QGIS-NZ\feature_templates>pb_tool compile
-Compiling ui_templatedock.ui to ui_templatedock.py
-Compiled 1 UI files
-Skipping resources.qrc (unchanged)
-Compiled 0 resource files
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'feature_template_dockwidget_base.ui'))
 ```
 
-You can now see a `ui_templatedock.py` file that is in the main folder. We will use this file when we make the extra dock logic
-
-
-## Creating the dock
-
-Open `plugincore.py` and add the following below the import line
-
-```
-from ui_templatedock import Ui_DockWidget
-
-class TemplateDock(Ui_DockWidget, QDockWidget):
-    def __init__(self, parent=None):
-        super(TemplateDock, self).__init__(parent)
-        self.setupUi(self)
-```
-
-This class is used to control all the UI logic for the dock we have just made.
-
-Before we go too far lets make sure our plugin can load and show this dock.
-
-Edit `initGui` to look like the following:
-
-```
-    def initGui(self):
-        self.dock = TemplateDock()
-        self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dock)
-        self.dock.hide()
-        
-        ...
-```
-
-Edit `run` to add the dock
-
-```
-    def run(self):
-        self.dock.show()
-```
-
-Also add the follow to the `unload` method
-
-```
-    self.iface.removeDockWidget(self.dock)
-```
-
-Open the command line and deploy you plugin using `pb_tool deploy`.
-
-Restart QGIS or use the Plugin Reloader to reload your plugin
-
-Hit the **Go!** button and the dock should open on the right hand side
-
-![Image](img/dock.png)
+`uic.loadUiType` will load the UI on the fly from the `.ui` file without the need for the compile step.
 
 ## Adding some items to the list
 
-Before we start on doing anything in QGIS itself.  Lets just add a few items to the list.  It's going to be a hard-coded list.
+Before we start on doing anything in QGIS itself.  Lets just add a few items to the list.  
 
-Define it like this
+It's going to be a hard-coded list for now but we can add config for it later.
+
+Define it like this in the `feature_template_dockwidget.py` file
 
 ```
 items = {
@@ -141,10 +81,9 @@ items = {
             "size": 200
         }
 }
-
 ```
 
-In the `TemplateDock` class we need to add new method to load the items
+In the `FeatureTemplatesDockWidget` class we need to add new method to load the items
 
 ```
     def load_items(self):
@@ -154,12 +93,14 @@ In the `TemplateDock` class we need to add new method to load the items
 
 ```
 
-in the `run` method make sure you call `load_items`
+in the `run` method of `feature_template.py` make sure you call `load_items`
 
 ```
     def run(self):
-        self.dock.load_items()
-        self.dock.show()
+        ... 
+        self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dockwidget)
+        self.dockwidget.show()
+        self.dockwidget.load_items()
 ```
 
 ## Signals and Slots
@@ -182,16 +123,18 @@ def do_event(self):
 mybuttton.pressed.connect(self.do_event)
 ```
 
-with that we are going to connect the apply button in our `TemplateDock` object emit a signal to tell something else to 
-handle the apply logic.
+### Connect the Update/Apply button
 
-In `TemplateDock` we need to define a signal called `templateApplied` like so
+with that we are going to connect the apply button in our `FeatureTemplateDockWidget` object emit a signal to tell 
+something else to handle the apply logic.
+
+In `FeatureTemplateDockWidget` we need to define a signal called `templateApplied` like so
 
 ```
-class TemplateDock(Ui_DockWidget, QDockWidget):
-    templateApplied = pyqtSignal(str, dict)
+class FeatureTemplatesDockWidget(QtGui.QDockWidget, FORM_CLASS):
 
-    def __init__(self, parent=None):
+    templateApplied = pyqtSignal(str, dict)
+    closingPlugin = pyqtSignal()
 ```
 
 This signal will emit a string and a dictionary.
@@ -218,7 +161,7 @@ Inside the `__init__` method we need to connect the apply button pressed event a
         self.templateApplied.emit(name, fields)
 ```
 
-We now need to connect to this signal in the `PluginCore` class
+We now need to connect to this signal in the `FeatureTemplates` class
 
 ```
     def initGui(self):

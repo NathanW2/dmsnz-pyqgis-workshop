@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b21e52e6-a590-421f-b714-e1dae9c5ffc1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/qgis.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feature_templates/templates.json" />
-      <change type="DELETED" beforePath="F:\Workshop\QGIS-NZ\feature_templates\test.py" afterPath="" />
-      <change type="DELETED" beforePath="F:\Workshop\QGIS-NZ\qgis-pluigin-template\test.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/installed2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/p_screen5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/plugininstalled2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workshop/docs/img/settings.png" />
+      <change type="DELETED" beforePath="F:\Workshop\QGIS-NZ\templatedock.ui" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/data.sqlite" afterPath="$PROJECT_DIR$/project/data.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/designer.png" afterPath="$PROJECT_DIR$/workshop/docs/img/designer.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/dockvalues.png" afterPath="$PROJECT_DIR$/workshop/docs/img/dockvalues.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/goal1.png" afterPath="$PROJECT_DIR$/workshop/docs/img/goal1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/QGIS-NZ.iml" afterPath="$PROJECT_DIR$/.idea/QGIS-NZ.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/installed.png" afterPath="$PROJECT_DIR$/workshop/docs/img/installed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/plugininstalled.png" afterPath="$PROJECT_DIR$/workshop/docs/img/plugininstalled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/project.png" afterPath="$PROJECT_DIR$/workshop/docs/img/project.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_templates/ui_templatedock.ui" afterPath="$PROJECT_DIR$/feature_templates/ui_templatedock.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/img/win1.png" afterPath="$PROJECT_DIR$/workshop/docs/img/win1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyQGIS-Cmd.bat" afterPath="$PROJECT_DIR$/PyQGIS-Cmd.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PyQGIS-PyCharm.bat" afterPath="$PROJECT_DIR$/PyQGIS-PyCharm.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/addingui.md" afterPath="$PROJECT_DIR$/workshop/docs/addingui.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/deploy.md" afterPath="$PROJECT_DIR$/workshop/docs/deploy.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_templates/metadata.txt" afterPath="$PROJECT_DIR$/feature_templates/metadata.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/mkdocs.yml" afterPath="$PROJECT_DIR$/workshop/mkdocs.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feature_templates/plugincore.py" afterPath="$PROJECT_DIR$/feature_templates/plugincore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/qgis.md" afterPath="$PROJECT_DIR$/workshop/docs/qgis.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workshop/docs/started.md" afterPath="$PROJECT_DIR$/workshop/docs/started.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="F:\Workshop\QGIS-NZ\feature_templates\images\icon.png" afterPath="$PROJECT_DIR$/icon.png" />
     </list>
     <ignored path="QGIS-NZ.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +51,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="metadata.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_templates/metadata.txt">
+      <file leaf-file-name="started.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workshop/docs/started.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.866667" vertical-offset="2037" max-vertical-offset="2890">
+              <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qgis.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/workshop/docs/qgis.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39145496" vertical-offset="885" max-vertical-offset="1751">
+              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -55,8 +83,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.633333" vertical-offset="0" max-vertical-offset="731">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state vertical-scroll-proportion="-22.633333" vertical-offset="154" max-vertical-offset="1020">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,84 +96,58 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2" vertical-offset="3350" max-vertical-offset="4216">
-              <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
+            <state vertical-scroll-proportion="-14.7" vertical-offset="2381" max-vertical-offset="3247">
+              <caret line="166" column="21" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qgis.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workshop/docs/qgis.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="feature_template_dockwidget.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureTemplates/feature_template_dockwidget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.166667" vertical-offset="868" max-vertical-offset="1734">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="617" max-vertical-offset="1513">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templates.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_templates/templates.json">
+      <file leaf-file-name="feature_template.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureTemplates/feature_template.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4284">
+              <caret line="237" column="4" selection-start-line="237" selection-start-column="4" selection-end-line="237" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureTemplates/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metadata.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureTemplates/metadata.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1442552498871" expanded="true" signature="0:152" placeholder="{...}" />
-                <marker date="1442552498871" expanded="true" signature="103:150" placeholder="{&quot;type&quot;: &quot;sewer pipe&quot;...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/workshop/mkdocs.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15614237" vertical-offset="0" max-vertical-offset="871">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugincore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_templates/plugincore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="1411">
-              <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="pb_tool.cfg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_templates/pb_tool.cfg">
+        <entry file="file://$PROJECT_DIR$/FeatureTemplates/pb_tool.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gaol2.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workshop/docs/img/gaol2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="started.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workshop/docs/started.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2666667" vertical-offset="850" max-vertical-offset="2771">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1360">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,18 +164,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PyQGIS-Cmd.bat" />
         <option value="$PROJECT_DIR$/qgis-pluigin-template/metadata.txt" />
         <option value="$PROJECT_DIR$/feature_templates/resources.qrc" />
         <option value="$PROJECT_DIR$/feature_templates/pb_tool.cfg" />
-        <option value="$PROJECT_DIR$/workshop/docs/started.md" />
         <option value="$PROJECT_DIR$/feature_templates/metadata.txt" />
-        <option value="$PROJECT_DIR$/workshop/docs/deploy.md" />
         <option value="$PROJECT_DIR$/feature_templates/templates.json" />
-        <option value="$PROJECT_DIR$/workshop/docs/addingui.md" />
         <option value="$PROJECT_DIR$/feature_templates/plugincore.py" />
-        <option value="$PROJECT_DIR$/workshop/docs/qgis.md" />
         <option value="$PROJECT_DIR$/workshop/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/PyQGIS-PyCharm.bat" />
+        <option value="$PROJECT_DIR$/PyQGIS-Cmd.bat" />
+        <option value="$PROJECT_DIR$/workshop/docs/deploy.md" />
+        <option value="$PROJECT_DIR$/workshop/docs/addingui.md" />
+        <option value="$PROJECT_DIR$/FeatureTemplates/feature_template_dockwidget.py" />
+        <option value="$PROJECT_DIR$/workshop/docs/started.md" />
+        <option value="$PROJECT_DIR$/workshop/docs/qgis.md" />
+        <option value="$PROJECT_DIR$/FeatureTemplates/feature_template.py" />
       </list>
     </option>
   </component>
@@ -234,52 +239,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="workshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qgis-pluigin-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="QGIS-NZ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="feature_templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -290,17 +249,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="mkdoc&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/mkdocs.yml&#10;mkdocs&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/mkdocs.yml&#10;mkd&#9;null&#9;null&#10;started&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/started.md&#10;de&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/deploy.md&#10;STARTED&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/started.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FeatureTemplates" />
+    <property name="SearchEverywhereHistoryKey" value="dep&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/deploy.md&#10;mkdoc&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/mkdocs.yml&#10;mkdocs&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/mkdocs.yml&#10;mkd&#9;null&#9;null&#10;started&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/started.md&#10;de&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/deploy.md&#10;STARTED&#9;FILE&#9;file://F:/Workshop/QGIS-NZ/workshop/docs/started.md" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="options.lastSelected" value="PyConsoleConfigurable.Python Console" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings />
+      <console-settings module-name="QGIS-NZ" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="QGIS-NZ" />
+      </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
@@ -477,10 +439,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -489,7 +451,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973656" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -521,30 +483,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PyQGIS-Cmd.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qgis-pluigin-template/metadata.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qgis-pluigin-template/resources.qrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feature_templates/resources.qrc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
@@ -563,17 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="866">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workshop/docs/started.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2666667" vertical-offset="850" max-vertical-offset="2771">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -609,8 +536,8 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1442552498871" expanded="true" signature="0:152" placeholder="{...}" />
-            <marker date="1442552498871" expanded="true" signature="103:150" placeholder="{&quot;type&quot;: &quot;sewer pipe&quot;...}" />
+            <marker date="1442552498871" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1442552498871" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;sewer pipe&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -631,13 +558,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/workshop/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="238">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQGIS-PyCharm.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyQGIS-Cmd.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/scripts/update-strings.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/help/make.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/help/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2312">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/scripts/run-env-linux.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/scripts/compile-strings.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/resources.qrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/pb_tool.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/metadata.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/workshop/docs/deploy.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.633333" vertical-offset="0" max-vertical-offset="731">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state vertical-scroll-proportion="-22.633333" vertical-offset="154" max-vertical-offset="1020">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/feature_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4284">
+          <caret line="237" column="4" selection-start-line="237" selection-start-column="4" selection-end-line="237" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTemplates/feature_template_dockwidget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="617" max-vertical-offset="1513">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -647,8 +699,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2" vertical-offset="3350" max-vertical-offset="4216">
-          <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
+        <state vertical-scroll-proportion="-14.7" vertical-offset="2381" max-vertical-offset="3247">
+          <caret line="166" column="21" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workshop/docs/started.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.866667" vertical-offset="2037" max-vertical-offset="2890">
+          <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -658,16 +721,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.166667" vertical-offset="868" max-vertical-offset="1734">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workshop/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15614237" vertical-offset="0" max-vertical-offset="871">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.39145496" vertical-offset="885" max-vertical-offset="1751">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
           <folding />
         </state>
       </provider>

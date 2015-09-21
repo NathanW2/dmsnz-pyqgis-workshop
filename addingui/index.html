@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating the UI and adding logic - DMS NZ PyQGIS Plugin workshop</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Creating the UI and adding logic";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DMS NZ PyQGIS Plugin workshop</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../started/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deploy/">Deploying Plugin</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Creating the UI and adding logic</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#creating-the-ui-and-first-logic">Creating the UI and first logic</a></li>
+                
+                    <li><a class="toctree-l4" href="#generating-the-ui-files">Generating the UI files</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-some-items-to-the-list">Adding some items to the list</a></li>
+                
+                    <li><a class="toctree-l4" href="#signals-and-slots">Signals and Slots</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#lets-move-on-using-the-qgis-api">Lets move on using the QGIS API</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qgis/">Adding QGIS logic</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DMS NZ PyQGIS Plugin workshop</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Creating the UI and adding logic</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="creating-the-ui-and-first-logic">Creating the UI and first logic</h1>
+<p>To create the UI you will need Qt Designer. This is shipped with QGIS and installed in the <code>bin</code> folder of the install.</p>
+<p>Run the application called <strong>designer.exe</strong></p>
+<p>After we open designer we are going to select <strong>Open..</strong> and select <code>feature_template_dockwidget_base.ui</code></p>
+<p><img alt="Image" src="../img/designer.png" /></p>
+<p>Select and delete the label that is already in the dock widget.</p>
+<p>Widgets</p>
+<p><img alt="Image" src="../img/widgets.png" /></p>
+<p>Properties</p>
+<p><img alt="Image" src="../img/properties.png" /></p>
+<p>For our widget we are going to need a <code>Stacked Widget</code>.</p>
+<ul>
+<li>Drag the stack widget onto the form</li>
+<li>Right click in the empty form and select <code>Layout -&gt; Layout in Grid</code></li>
+</ul>
+<p>All Qt widgets are contained in layouts.  The layout controls how the widgets fit together.</p>
+<p>We can use the stacked widget to add move "pages" to our widget later if we connect the define new button.</p>
+<p>You will also need 3x <code>Push Button</code> and a <code>List Widget</code>.  </p>
+<p>Drag the buttons and list widget inside the stacked widget</p>
+<p><img alt="Image" src="../img/drag.png" /></p>
+<p>Don't worry if they don't look right. When we set the layout it will fix them up for us</p>
+<p><img alt="Image" src="../img/layout.png" /></p>
+<ul>
+<li>Select a button and hit F2 to label the buttons. We need <strong>Define new</strong>, <strong>Delete</strong>, <strong>Apply</strong></li>
+<li>Also update the object name on the buttons and list widget (<code>templatesList</code>, <code>newButton</code>, <code>deleteButton</code>, <code>applyButton</code>)</li>
+<li>Drag the widget around the form to change the layout</li>
+</ul>
+<p>The name of the object is important because we will use this in the code to set more things.</p>
+<ul>
+<li>Save the UI file into your plugin working folder. Call it <code>ui_templatedock.ui</code></li>
+</ul>
+<h2 id="generating-the-ui-files">Generating the UI files</h2>
+<p>Qt has a handy function for creating the UI files on the fly.  This removes the build step for generating the UI files</p>
+<p>Qt only needs the path to the <code>.ui</code> file and it will generate the Python object on the fly ready to use.</p>
+<p>Open <code>feature_template_dockwidget.py</code></p>
+<pre><code>FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'feature_template_dockwidget_base.ui'))
+</code></pre>
+
+<p><code>uic.loadUiType</code> will load the UI on the fly from the <code>.ui</code> file without the need for the compile step.</p>
+<h2 id="adding-some-items-to-the-list">Adding some items to the list</h2>
+<p>Before we start on doing anything in QGIS itself.  Lets just add a few items to the list.  </p>
+<p>It's going to be a hard-coded list for now but we can add config for it later.</p>
+<p>Define it like this in the <code>feature_template_dockwidget.py</code> file</p>
+<pre><code>items = {
+    &quot;water pipe - 100mm&quot;:
+        {
+            &quot;type&quot;: &quot;water pipe&quot;,
+            &quot;size&quot;: 100
+        },
+    &quot;sewer pipe - 200mm&quot;:
+        {
+            &quot;type&quot;: &quot;sewer pipe&quot;,
+            &quot;size&quot;: 200
+        }
+}
+</code></pre>
+
+<p>In the <code>FeatureTemplatesDockWidget</code> class we need to add new method to load the items</p>
+<pre><code>    def load_items(self):
+        self.templatesList.clear()
+        for key in items:
+            self.templatesList.addItem(key)
+
+</code></pre>
+
+<p>in the <code>run</code> method of <code>feature_template.py</code> make sure you call <code>load_items</code></p>
+<pre><code>    def run(self):
+        ... 
+        self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dockwidget)
+        self.dockwidget.show()
+        self.dockwidget.load_items()
+</code></pre>
+
+<h2 id="signals-and-slots">Signals and Slots</h2>
+<p>Qt, and QGIS, uses Signals and Slots to message objects about events that have happened.  They are a great thing to use
+when parts of your applications need to talk to each other.</p>
+<p>Here is a quick run down.</p>
+<ul>
+<li>Objects can signals defined which are emitted when called</li>
+<li>Object can connect slots to these signals to handle the event</li>
+<li>Normal Python functions can be used for slots without any extra work</li>
+</ul>
+<p>Here is an example:</p>
+<pre><code>def do_event(self):
+    print &quot;Do something&quot;
+
+mybuttton.pressed.connect(self.do_event)
+</code></pre>
+
+<h3 id="connect-the-updateapply-button">Connect the Update/Apply button</h3>
+<p>with that we are going to connect the apply button in our <code>FeatureTemplateDockWidget</code> object emit a signal to tell 
+something else to handle the apply logic.</p>
+<p>In <code>FeatureTemplateDockWidget</code> we need to define a signal called <code>templateApplied</code> like so</p>
+<pre><code>class FeatureTemplatesDockWidget(QtGui.QDockWidget, FORM_CLASS):
+
+    templateApplied = pyqtSignal(str, dict)
+    closingPlugin = pyqtSignal()
+</code></pre>
+
+<p>This signal will emit a string and a dictionary.</p>
+<p><strong>Note</strong>: Take note on where <code>templateApplied</code> is defined. Outside of any methods at the class level</p>
+<p>Inside the <code>__init__</code> method we need to connect the apply button pressed event and handle the extra logic</p>
+<pre><code>    def __init__(self, parent=None):
+        super(TemplateDock, self).__init__(parent)
+        self.setupUi(self)
+        self.applyButton.pressed.connect(self.apply_template)
+
+    def apply_template(self):
+        # Don't do anything if there is no selection text
+        if not self.templatesList.currentItem():
+            return
+
+        name = self.templatesList.currentItem().text()
+
+        # Get the fields from the items list
+        fields = items[name]
+        self.templateApplied.emit(name, fields)
+</code></pre>
+
+<p>We now need to connect to this signal in the <code>FeatureTemplates</code> class</p>
+<pre><code>    def initGui(self):
+        self.dock = TemplateDock()
+        self.dock.templateApplied.connect(self.apply_template)
+        ....
+
+    def apply_template(self, name, fields):
+        pass
+</code></pre>
+
+<p>We will come back and wire up <code>apply_template</code> soon</p>
+<p>Run <code>pb_tool deploy</code> again and restart QGIS or use the plugin reloader to test the plugin.  You should now see this:</p>
+<p><img alt="Image" src="../img/dockvalues.png" /></p>
+<h1 id="lets-move-on-using-the-qgis-api">Lets move on using the <a href="../qgis/">QGIS</a> API</h1>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../qgis/" class="btn btn-neutral float-right" title="Adding QGIS logic"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../deploy/" class="btn btn-neutral" title="Deploying Plugin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../deploy/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../qgis/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

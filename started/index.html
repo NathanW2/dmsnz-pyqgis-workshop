@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started - DMS NZ PyQGIS Plugin workshop</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Getting Started";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> DMS NZ PyQGIS Plugin workshop</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Getting Started</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#getting-started-creating-the-base-plugin">Getting Started - Creating the base plugin</a></li>
+                
+                    <li><a class="toctree-l4" href="#goals">Goals</a></li>
+                
+                    <li><a class="toctree-l4" href="#handy-links">Handy Links</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugin-goals">Plugin goals</a></li>
+                
+                    <li><a class="toctree-l4" href="#creating-the-plugin">Creating the plugin</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugin-layout-break-down">Plugin layout break down</a></li>
+                
+                    <li><a class="toctree-l4" href="#metadata">Metadata</a></li>
+                
+                    <li><a class="toctree-l4" href="#__init__-file-and-plugin-entry-point">__init__ file and plugin entry point</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugincore">PluginCore</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#important">Important!</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#lets-move-on-to-deploying-the-project-to-test-this">Lets move on to deploying the project to test this.</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deploy/">Deploying Plugin</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../addingui/">Creating the UI and adding logic</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../qgis/">Adding QGIS logic</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">DMS NZ PyQGIS Plugin workshop</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Getting Started</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="getting-started-creating-the-base-plugin">Getting Started - Creating the base plugin</h1>
+<h3 id="goals">Goals</h3>
+<ul>
+<li>Generate a plugin using the QGIS plugin builder</li>
+<li>View plugin layout</li>
+<li>View plugin metadata</li>
+<li>View main plugin code</li>
+</ul>
+<h3 id="handy-links">Handy Links</h3>
+<p>Here are some links that we might use throughout the workshop or you can use later when building a plugin or working with the QGIS Python API.</p>
+<ul>
+<li>QGIS API: http://qgis.org/api/</li>
+<li>2.8 http://qgis.org/api/2.8/</li>
+<li>QGIS cookbook: http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/</li>
+</ul>
+<p><strong>Note:</strong> We will be using 2.8 as the target install for PyQGIS however as the API is stable between 2.x version using 2.10 is also fine.</p>
+<h2 id="plugin-goals">Plugin goals</h2>
+<p>The goal of the workshop is to create a plugin but not just a “here is how to open a layer” type plugin, although they are handy,
+ they don’t get you very far and the cookbook already covers that.
+Let's build something that touches on different parts of the application, from symbols, layers, features, and even drag and drop if we get time.</p>
+<p>The final goal of the plugin is to create something that can update QGIS features based on a pre defined templates.</p>
+<p>Here is an example of the UI that we are going to build:</p>
+<p><img alt="Image" src="../img/goal1.png" /></p>
+<h2 id="creating-the-plugin">Creating the plugin</h2>
+<p>We are not going to start from nothing, that doesn’t really help us, so we are going to use the QGIS plugin builder
+to get up and running. </p>
+<p>This is only so we can get something started a more correct plugin, something that you can publish for others to 
+use can need more work and polish.</p>
+<h3 id="qgis-plugin-builder">QGIS Plugin builder</h3>
+<p>For this we will need the QGIS plugin builder.  The QGIS plugin builder is a plugin you can install in QGIS that will
+generate a plugin for you ready to go.</p>
+<ul>
+<li>Open QGIS and install the QGIS Plugin Builder Plugin</li>
+<li>From <code>Plugins -&gt; Plugin Builder</code> run the plugin</li>
+</ul>
+<p>The plugin builder will gives us a screen to fill in all the information that is needed.  Go ahead and fill in the in 
+information as shown below:</p>
+<p><img alt="Image" src="../img/p_screen1.png" />
+<img alt="Image" src="../img/p_screen2.png" /></p>
+<p>Be sure to select <strong>Tool button with dock widget</strong> as the template</p>
+<p><img alt="Image" src="../img/p_screen3.png" /></p>
+<p>One should always add unit tests to our code but we won't here because well :P We are also using <code>pb_tool</code> so untick <code>Makefile</code></p>
+<p><img alt="Image" src="../img/p_screen4.png" /></p>
+<p>If you want to publish the plugin for others it needs to have a bug tracker and code repository however we can put in stub
+entries for those now as we don't need it yet and it's only enforced at publish time.</p>
+<p><img alt="Image" src="../img/p_screen5.png" /></p>
+<p>The next screen will ask you to select a folder to save the plugin into.  Save it into a know place for you. Doesn't matter
+where just somewhere easy to get to.</p>
+<h3 id="pycharm-project">PyCharm project</h3>
+<p>We need to create a PyCharm project from the folder the plugin builder just generated for us.</p>
+<ul>
+<li>Open PyCharm and select <code>File -&gt; Open</code> and select the folder that you just created using the plugin.  Should </li>
+</ul>
+<p><img alt="Image" src="../img/project.png" /></p>
+<p>Open <code>File -&gt; Settings</code> search for <code>Project</code> and set the <strong>Project Interpertor</strong> to the QGIS installed one.</p>
+<p><img alt="Image" src="../img/settings.png" /></p>
+<p><strong>Note</strong>: On Linux/OS X this is the default Python install no need to do anything here.</p>
+<h2 id="plugin-layout-break-down">Plugin layout break down</h2>
+<p>Before we get started it’s best to explain the basic layout of the simple plugin we have here</p>
+<ul>
+<li><code>__init__.py</code> - The main entry point for this plugin that is called when QGIS loads the plugin</li>
+<li><code>LICENSE</code> - Well I’m sure you can guess</li>
+<li><code>metadata.txt</code> - The plugin metadata that is used when uploading the plugin to the plugin repository and when QGIS loads the plugin</li>
+<li><code>feature_template.py</code> - The main code file for this plugin.  We will be adding a few more of these though out the workshop</li>
+<li><code>README.txt</code> - The README for the plugin</li>
+<li><code>pb_tool.cfg</code> - The <code>pb_tool</code> config file. Used to build and deploy the plugin</li>
+<li><code>resoruces.qrc</code> - Qt resource file used to add icons to buttons and widgets.</li>
+<li><code>feature_template_dockwidget_base.ui</code> - The base dock widget UI base file. We will open this in Qt Designer a bit later</li>
+<li><code>feature_template_dockwidget.py</code> - Core logic for the <code>feature_template_dockwidget_base.ui</code></li>
+</ul>
+<p>There is also a scripts folder and help folder which we won't go into at this stage.</p>
+<h2 id="metadata">Metadata</h2>
+<p>Open the metadata.txt file in PyCharm and have a look at the layout. This file contains all the information that used
+by QGIS when it displays the plugin in the installer.</p>
+<h2 id="__init__-file-and-plugin-entry-point"><code>__init__</code> file and plugin entry point</h2>
+<p>Open up the <code>__init__</code> file.  The <code>__init__</code> file marks this folder as a Python package and QGIS can load a Python package
+as a plugin if the package setup is right.</p>
+<p>Inside <code>__init__</code> you will find</p>
+<pre><code>def classFactory(iface):
+    &quot;&quot;&quot;Load FeatureTemplates class from file FeatureTemplates.
+
+    :param iface: A QGIS interface instance.
+    :type iface: QgsInterface
+    &quot;&quot;&quot;
+    #
+    from .feature_template import FeatureTemplates
+    return FeatureTemplates(iface)
+</code></pre>
+
+<p>The <code>classFactory</code> method is called when QGIS loads the plugin. QGIS will pass the API interface object (<code>QgisInterface</code>)
+into your plugin. This object is normally used to talk to the main QGIS UI interface.</p>
+<p>The main thing this function does is return an instance of the class for you plugin (<code>FeatureTemplates</code>).  <code>FeatureTempaltes</code> can be
+found in <code>feature_template.py</code></p>
+<h2 id="plugincore">PluginCore</h2>
+<p>Lets take a quick look at <code>feature_template.py</code> before we do a test plugin install.  There is a lot of stuff in this
+template but we just need to have a quick look at a few methods</p>
+<p>The two main important methods here are <code>initGui</code> and <code>unload</code>. </p>
+<ul>
+<li><code>initGui</code> called when the plugin is loaded from QGIS.  Called when QGIS is loaded. We normally setup events, buttons, etc here</li>
+<li><code>unload</code> called when the plugin is uploaded from the interface.  We do things that remove the plugin from the QGIS interface.</li>
+</ul>
+<h1 id="important">Important!</h1>
+<p><strong>Don't skip this step as the plugin will not load correctly</strong></p>
+<p>Before we move on we need to update one thing the plugin builder doesn't generate correctly.  </p>
+<p>Change the following line at the top from</p>
+<pre><code>import resources
+</code></pre>
+
+<p>to </p>
+<pre><code>import resources_rc
+</code></pre>
+
+<h1 id="lets-move-on-to-deploying-the-project-to-test-this">Lets move on to <a href="../deploy/">deploying</a> the project to test this.</h1>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../deploy/" class="btn btn-neutral float-right" title="Deploying Plugin"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

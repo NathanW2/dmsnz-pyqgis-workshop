@@ -6,24 +6,25 @@ Goals:
 
 - Handle apply button
 - Handling layer selection
-- Update features based on only set fields from config
+- Update features based on set fields
 - Refresh the map
 
-First things first we need to handle the `apply_template` button from the last step in our `FeatureTemplates` class.  
+First things first. We need to handle the `apply_template` button from the last step in our `FeatureTemplates` class.  
 In here we are going to grab the selected objects and apply the field data we have in our template to the objects.
-
 
 ```
 layer = self.iface.activeLayer()
 ```
 
-and we get the selected objects using:
+We get the selected objects using:
 
 ```
 features = layer.selectedFeatures()
 ```
 
-putting it all together we have
+**Tip:** Look at the `QgsVectorLayer` API for what else is possible.
+
+Putting it all together we have:
  
 ```
     def apply_template(self, name, fields):
@@ -33,7 +34,7 @@ putting it all together we have
             pass
 ```
 
-now we want to apply the value from the `fields` dictionary to the feature. Each `feature` will be of type `QgsFeature`
+Now we want to apply the value from the `fields` dictionary to the feature. Each `feature` will be of type `QgsFeature`
 
 ```
     for feature in features:
@@ -77,15 +78,13 @@ Run `pb_deploy` and reload the plugin in QGIS.
 Load the sample **workshop.qgs** qgis project found in the project folder for this workshop.  This project already has
 some sample data we can work with. 
 
-We can get the active layer object (make sure **pipes** is active) by doing:
-
 The data in the sample project doesn't have any type or size data assigned.  
 We are now going to use the plugin to assign those values. 
 
 - Select some features using the select tool
 - Enable editing in the toolbar
 - Select a item from the list in the dock
-- Hit apply
+- Hit **apply/update**
 
 If everything is working you can see the new data being applied to the features on the fly. Win!
 

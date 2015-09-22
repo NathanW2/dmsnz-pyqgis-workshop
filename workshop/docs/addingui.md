@@ -62,7 +62,7 @@ FORM_CLASS, _ = uic.loadUiType(os.path.join(
 
 ## Adding some items to the list
 
-Before we start on doing anything in QGIS itself.  Lets just add a few items to the list.  
+Before we start on doing anything in QGIS itself.  Let's just add a few items to the list.  
 
 It's going to be a hard-coded list for now but we can add config for it later.
 
@@ -93,7 +93,7 @@ In the `FeatureTemplatesDockWidget` class we need to add new method to load the 
 
 ```
 
-in the `run` method of `feature_template.py` make sure you call `load_items`
+in the `run` method of `feature_template.py`. Make sure you call `load_items`
 
 ```
     def run(self):
@@ -110,7 +110,7 @@ when parts of your applications need to talk to each other.
 
 Here is a quick run down.
 
-- Objects can signals defined which are emitted when called
+- Objects can define signals which are emitted.
 - Object can connect slots to these signals to handle the event
 - Normal Python functions can be used for slots without any extra work
 
@@ -125,8 +125,8 @@ mybuttton.pressed.connect(self.do_event)
 
 ### Connect the Update/Apply button
 
-with that we are going to connect the apply button in our `FeatureTemplateDockWidget` object emit a signal to tell 
-something else to handle the apply logic.
+With that we are going to connect the **Apply/Update** button in our `FeatureTemplateDockWidget` object to 
+emit a signal to tell something else to handle the apply logic.
 
 In `FeatureTemplateDockWidget` we need to define a signal called `templateApplied` like so
 
@@ -141,7 +141,7 @@ This signal will emit a string and a dictionary.
 
 **Note**: Take note on where `templateApplied` is defined. Outside of any methods at the class level
 
-Inside the `__init__` method we need to connect the apply button pressed event and handle the extra logic
+Inside the `__init__` method we need to connect the **Apply button** pressed event and handle the extra logic
 
 ```
     def __init__(self, parent=None):
@@ -175,7 +175,7 @@ We now need to connect to this signal in the `FeatureTemplates` class
 
 We will come back and wire up `apply_template` soon
 
-Run `pb_tool deploy` again and restart QGIS or use the plugin reloader to test the plugin.  You should now see this:
+Run `pb_tool deploy` again and restart QGIS (or use the plugin reloader) to test the plugin.  You should now see this:
 
 ![Image](img/dockvalues.png)
 

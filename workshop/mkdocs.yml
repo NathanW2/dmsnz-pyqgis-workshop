@@ -5,5 +5,5 @@ pages:
 - Deploying Plugin: deploy.md
 - Creating the UI and adding logic: addingui.md
 - Adding QGIS logic: qgis.md
-- About: about.md
+- Other Python uses: other.md
 theme: readthedocs

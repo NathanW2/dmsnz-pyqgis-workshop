@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>About - DMS NZ PyQGIS Plugin workshop</title>
+  <title>Other Python uses - DMS NZ PyQGIS Plugin workshop</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
+    var mkdocs_page_name = "Other Python uses";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -86,9 +86,12 @@
           
             <li>
     <li class="toctree-l1 current">
-        <a class="current" href="./">About</a>
+        <a class="current" href="./">Other Python uses</a>
         
             <ul>
+            
+                <li class="toctree-l3"><a href="#other-places-python-can-be-used">Other places Python can be used</a></li>
+                
             
             </ul>
         
@@ -117,7 +120,7 @@
     
       
     
-    <li>About</li>
+    <li>Other Python uses</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -127,7 +130,15 @@
           <div role="main">
             <div class="section">
               
-                
+                <h2 id="other-places-python-can-be-used">Other places Python can be used</h2>
+<p>Creating a plugin isn't the only place you can use Python to expand QGIS.  </p>
+<p>Other places that QGIS can be used include:</p>
+<ul>
+<li><code>startup.py</code> - A python script that is run on each QGIS load. (Run before any project or plugins load)</li>
+<li><strong>expression functions</strong> - Custom expression functions can be added using Python functions</li>
+<li><strong>QGIS Server plugins</strong> - Custom request handlers for QGIS Server that can process the server request</li>
+<li><strong>Processing Toolbox Extenstion</strong> - Add extra providers to the processing toolbox.</li>
+</ul>
               
             </div>
           </div>

@@ -102,7 +102,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../about/">About</a>
+        <a class="" href="../other/">Other Python uses</a>
         
     </li>
 <li>
@@ -180,7 +180,7 @@
 
 <p><code>uic.loadUiType</code> will load the UI on the fly from the <code>.ui</code> file without the need for the compile step.</p>
 <h2 id="adding-some-items-to-the-list">Adding some items to the list</h2>
-<p>Before we start on doing anything in QGIS itself.  Lets just add a few items to the list.  </p>
+<p>Before we start on doing anything in QGIS itself.  Let's just add a few items to the list.  </p>
 <p>It's going to be a hard-coded list for now but we can add config for it later.</p>
 <p>Define it like this in the <code>feature_template_dockwidget.py</code> file</p>
 <pre><code>items = {
@@ -205,7 +205,7 @@
 
 </code></pre>
 
-<p>in the <code>run</code> method of <code>feature_template.py</code> make sure you call <code>load_items</code></p>
+<p>in the <code>run</code> method of <code>feature_template.py</code>. Make sure you call <code>load_items</code></p>
 <pre><code>    def run(self):
         ... 
         self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dockwidget)
@@ -218,7 +218,7 @@
 when parts of your applications need to talk to each other.</p>
 <p>Here is a quick run down.</p>
 <ul>
-<li>Objects can signals defined which are emitted when called</li>
+<li>Objects can define signals which are emitted.</li>
 <li>Object can connect slots to these signals to handle the event</li>
 <li>Normal Python functions can be used for slots without any extra work</li>
 </ul>
@@ -230,8 +230,8 @@ mybuttton.pressed.connect(self.do_event)
 </code></pre>
 
 <h3 id="connect-the-updateapply-button">Connect the Update/Apply button</h3>
-<p>with that we are going to connect the apply button in our <code>FeatureTemplateDockWidget</code> object emit a signal to tell 
-something else to handle the apply logic.</p>
+<p>With that we are going to connect the <strong>Apply/Update</strong> button in our <code>FeatureTemplateDockWidget</code> object to 
+emit a signal to tell something else to handle the apply logic.</p>
 <p>In <code>FeatureTemplateDockWidget</code> we need to define a signal called <code>templateApplied</code> like so</p>
 <pre><code>class FeatureTemplatesDockWidget(QtGui.QDockWidget, FORM_CLASS):
 
@@ -241,7 +241,7 @@ something else to handle the apply logic.</p>
 
 <p>This signal will emit a string and a dictionary.</p>
 <p><strong>Note</strong>: Take note on where <code>templateApplied</code> is defined. Outside of any methods at the class level</p>
-<p>Inside the <code>__init__</code> method we need to connect the apply button pressed event and handle the extra logic</p>
+<p>Inside the <code>__init__</code> method we need to connect the <strong>Apply button</strong> pressed event and handle the extra logic</p>
 <pre><code>    def __init__(self, parent=None):
         super(TemplateDock, self).__init__(parent)
         self.setupUi(self)
@@ -270,7 +270,7 @@ something else to handle the apply logic.</p>
 </code></pre>
 
 <p>We will come back and wire up <code>apply_template</code> soon</p>
-<p>Run <code>pb_tool deploy</code> again and restart QGIS or use the plugin reloader to test the plugin.  You should now see this:</p>
+<p>Run <code>pb_tool deploy</code> again and restart QGIS (or use the plugin reloader) to test the plugin.  You should now see this:</p>
 <p><img alt="Image" src="../img/dockvalues.png" /></p>
 <h1 id="lets-move-on-using-the-qgis-api">Lets move on using the <a href="../qgis/">QGIS</a> API</h1>
               

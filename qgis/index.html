@@ -97,7 +97,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../about/">About</a>
+        <a class="" href="../other/">Other Python uses</a>
         
     </li>
 <li>
@@ -140,19 +140,20 @@
 <ul>
 <li>Handle apply button</li>
 <li>Handling layer selection</li>
-<li>Update features based on only set fields from config</li>
+<li>Update features based on set fields</li>
 <li>Refresh the map</li>
 </ul>
-<p>First things first we need to handle the <code>apply_template</code> button from the last step in our <code>FeatureTemplates</code> class.<br />
+<p>First things first. We need to handle the <code>apply_template</code> button from the last step in our <code>FeatureTemplates</code> class.<br />
 In here we are going to grab the selected objects and apply the field data we have in our template to the objects.</p>
 <pre><code>layer = self.iface.activeLayer()
 </code></pre>
 
-<p>and we get the selected objects using:</p>
+<p>We get the selected objects using:</p>
 <pre><code>features = layer.selectedFeatures()
 </code></pre>
 
-<p>putting it all together we have</p>
+<p><strong>Tip:</strong> Look at the <code>QgsVectorLayer</code> API for what else is possible.</p>
+<p>Putting it all together we have:</p>
 <pre><code>    def apply_template(self, name, fields):
         layer = self.iface.activeLayer()
         features = layer.selectedFeatures()
@@ -160,7 +161,7 @@ In here we are going to grab the selected objects and apply the field data we ha
             pass
 </code></pre>
 
-<p>now we want to apply the value from the <code>fields</code> dictionary to the feature. Each <code>feature</code> will be of type <code>QgsFeature</code></p>
+<p>Now we want to apply the value from the <code>fields</code> dictionary to the feature. Each <code>feature</code> will be of type <code>QgsFeature</code></p>
 <pre><code>    for feature in features:
         for field, value in fields.itervalues():
             feature[field] = value
@@ -192,14 +193,13 @@ get the value of the first field. </p>
 <h2 id="load-the-sample-project-and-test">Load the sample project and test</h2>
 <p>Load the sample <strong>workshop.qgs</strong> qgis project found in the project folder for this workshop.  This project already has
 some sample data we can work with. </p>
-<p>We can get the active layer object (make sure <strong>pipes</strong> is active) by doing:</p>
 <p>The data in the sample project doesn't have any type or size data assigned.<br />
 We are now going to use the plugin to assign those values. </p>
 <ul>
 <li>Select some features using the select tool</li>
 <li>Enable editing in the toolbar</li>
 <li>Select a item from the list in the dock</li>
-<li>Hit apply</li>
+<li>Hit <strong>apply/update</strong></li>
 </ul>
 <p>If everything is working you can see the new data being applied to the features on the fly. Win!</p>
 <p><img alt="Image" src="../img/working.gif" /></p>
@@ -213,7 +213,7 @@ code here.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../about/" class="btn btn-neutral float-right" title="About"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../other/" class="btn btn-neutral float-right" title="Other Python uses"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../addingui/" class="btn btn-neutral" title="Creating the UI and adding logic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -245,7 +245,7 @@ code here.</p>
         <span><a href="../addingui/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../other/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
